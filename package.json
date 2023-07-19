@@ -24,9 +24,11 @@
     "url": "https://github.com/steeringwaves/js-eslint-config/issues"
   },
   "homepage": "https://github.com/steeringwaves/js-eslint-config#readme",
+  "engines": {
+    "node": ">=16.0.0"
+  },
   "peerDependencies": {
-    "eslint": ">= 8",
-    "prettier": ">= 2",
+    "eslint": "^8.21.0",
     "eslint-plugin-import": "^2.27.5",
     "eslint-plugin-jsx-a11y": "^6.7.1",
     "eslint-config-prettier": "^8.5.0",
