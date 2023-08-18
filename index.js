@@ -158,6 +158,7 @@ module.exports = {
           },
         ],
         "@typescript-eslint/no-continue": "off",
+		    "@typescript-eslint/consistent-type-imports": "error"
       },
     },
     {
@@ -209,6 +210,7 @@ module.exports = {
           },
         ],
         "@typescript-eslint/no-continue": "off",
+		    "@typescript-eslint/consistent-type-imports": "error",
         "vue/singleline-html-element-content-newline": "off",
         "vue/html-closing-bracket-newline": "off",
         "vue/first-attribute-linebreak": "off",
