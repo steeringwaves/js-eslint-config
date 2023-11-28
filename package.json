@@ -1,6 +1,6 @@
 {
   "name": "@steeringwaves/eslint-config",
-  "version": "1.0.5",
+  "version": "1.0.6",
   "description": "Steeringwave's ESLint config, following our styleguide",
   "main": "index.js",
   "private": false,
@@ -28,13 +28,13 @@
     "node": ">=16.0.0"
   },
   "peerDependencies": {
-    "eslint": "^8.21.0",
+    "eslint": "^8.45.0",
     "eslint-plugin-import": "^2.27.5",
     "eslint-plugin-jsx-a11y": "^6.7.1",
-    "eslint-config-prettier": "^8.5.0",
-    "eslint-plugin-prettier": "^4.2.1",
-    "eslint-plugin-vue": "^9.15.1",
-    "@typescript-eslint/eslint-plugin": "^5.32.0"
+    "eslint-config-prettier": "^9.0.0",
+    "eslint-plugin-prettier": "^5.0.1",
+    "eslint-plugin-vue": "^9.18.1",
+    "@typescript-eslint/eslint-plugin": "^5.62.0"
   },
   "dependencies": {
     "@typescript-eslint/parser": "^5.32.0",
