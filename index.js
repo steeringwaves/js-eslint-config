@@ -111,8 +111,7 @@ module.exports = {
 				checkLoops: false
 			}
 		],
-		"import/no-extraneous-dependencies": ["off"],
-		"import/no-cycle": ["warn"]
+		"import/no-extraneous-dependencies": ["off"]
 	},
 	overrides: [
 		{
