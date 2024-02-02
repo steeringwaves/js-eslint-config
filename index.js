@@ -158,7 +158,8 @@ module.exports = {
 					}
 				],
 				"@typescript-eslint/no-continue": "off",
-				"@typescript-eslint/consistent-type-imports": "error"
+				"@typescript-eslint/consistent-type-imports": "error",
+				"@typescript-eslint/no-floating-promises": ["warn"]
 			}
 		},
 		{
@@ -231,7 +232,8 @@ module.exports = {
 					{
 						shallowOnly: true
 					}
-				]
+				],
+				"@typescript-eslint/no-floating-promises": ["warn"]
 			},
 			parser: "vue-eslint-parser",
 			parserOptions: {
