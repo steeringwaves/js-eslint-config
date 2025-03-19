@@ -5,6 +5,7 @@ import vueParser from "vue-eslint-parser";
 import js from "@eslint/js";
 import prettier from "eslint-config-prettier/flat";
 import vue from "eslint-plugin-vue";
+import tsParser from "@typescript-eslint/parser";
 
 export default defineConfig([
   globalIgnores([
@@ -14,6 +15,10 @@ export default defineConfig([
     "Testing/Benchmarks",
     "**/Release/",
     "**/Misc/",
+    ".output/*",
+    ".nuxt/*",
+    "dist/*",
+    "node_modules/*",
   ]),
   js.configs.recommended,
   prettier,
@@ -227,13 +232,17 @@ export default defineConfig([
         ...globals.browser,
       },
 
+      parser: vueParser,
       parserOptions: {
-        parser: vueParser,
+        parser: tsParser,
+        sourceType: "module",
+        extraFileExtensions: [".vue"],
         projectService: true,
         tsconfigRootDir: import.meta.dirname,
+
         vueFeatures: {
           filter: true,
-          interpolationAsNonHTML: false,
+          interpolationAsNonHTML: true,
         },
       },
     },
@@ -282,6 +291,15 @@ export default defineConfig([
       "vue/max-attributes-per-line": "off",
       "vue/html-indent": ["off", "tab"],
       "vue/script-indent": ["off", "tab"],
+
+      "vue/max-len": [
+        "error",
+        {
+          code: 128,
+          template: 128,
+          ignoreStrings: true,
+        },
+      ],
 
       "vue/html-self-closing": [
         "error",
