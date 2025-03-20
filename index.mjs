@@ -42,7 +42,7 @@ export default defineConfig([
 
 			parserOptions: {
 				projectService: true,
-				tsconfigRootDir: __dirname
+				// tsconfigRootDir: __dirname
 			}
 		},
 
@@ -172,7 +172,7 @@ export default defineConfig([
 		languageOptions: {
 			parserOptions: {
 				projectService: true,
-				tsconfigRootDir: __dirname
+				// tsconfigRootDir: __dirname
 			}
 		},
 
@@ -243,7 +243,7 @@ export default defineConfig([
 				sourceType: "module",
 				extraFileExtensions: [".vue"],
 				projectService: true,
-				tsconfigRootDir: __dirname,
+				// tsconfigRootDir: __dirname,
 
 				vueFeatures: {
 					filter: true,
