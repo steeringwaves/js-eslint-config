@@ -1,45 +1,48 @@
 {
-  "name": "@steeringwaves/eslint-config",
-  "version": "2.0.0",
-  "description": "Steeringwave's ESLint config, following our styleguide",
-  "main": "index.mjs",
-  "private": false,
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/steeringwaves/js-eslint-config.git"
-  },
-  "keywords": [
-    "eslint",
-    "eslintconfig",
-    "config",
-    "javascript",
-    "styleguide"
-  ],
-  "author": "",
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/steeringwaves/js-eslint-config/issues"
-  },
-  "homepage": "https://github.com/steeringwaves/js-eslint-config#readme",
-  "engines": {
-    "node": ">=20.8.1"
-  },
-  "peerDependencies": {
-    "eslint": "^9.22.0",
-    "eslint-config-prettier": "^10.1.1",
-    "eslint-plugin-vue": "^10.0.0"
-  },
-  "dependencies": {
-    "@eslint/js": "^9.22.0",
-    "globals": "^16.0.0",
-    "typescript-eslint": "^8.26.1"
-  },
-  "devDependencies": {
-    "@typescript-eslint/parser": "^8.26.1",
-    "eslint": "^9.22.0",
-    "eslint-plugin-vue": "^10.0.0"
-  }
+	"name": "@steeringwaves/eslint-config",
+	"version": "2.1.0",
+	"description": "Steeringwave's ESLint config, following our styleguide",
+	"main": "index.mjs",
+	"private": false,
+	"scripts": {
+		"test": "echo \"Error: no test specified\" && exit 1"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/steeringwaves/js-eslint-config.git"
+	},
+	"keywords": [
+		"eslint",
+		"eslintconfig",
+		"config",
+		"javascript",
+		"styleguide"
+	],
+	"author": "",
+	"license": "MIT",
+	"bugs": {
+		"url": "https://github.com/steeringwaves/js-eslint-config/issues"
+	},
+	"homepage": "https://github.com/steeringwaves/js-eslint-config#readme",
+	"engines": {
+		"node": ">=20.8.1"
+	},
+	"peerDependencies": {
+		"eslint": "^9.22.0",
+		"eslint-config-prettier": "^10.1.1",
+		"eslint-plugin-vue": "^10.0.0"
+	},
+	"dependencies": {
+		"@eslint/js": "^9.22.0",
+		"globals": "^16.0.0",
+		"typescript-eslint": "^8.26.1",
+		"@typescript-eslint/parser": "^8.26.1",
+		"eslint": "^9.22.0",
+		"eslint-plugin-import": "^2.31.0",
+		"eslint-plugin-vue": "^10.0.0"
+	},
+	"devDependencies": {
+		"@steeringwaves/prettier-config": "^1.0.2",
+		"prettier": "^3.3.3"
+	}
 }

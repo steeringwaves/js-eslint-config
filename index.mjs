@@ -6,6 +6,7 @@ import js from "@eslint/js";
 import prettier from "eslint-config-prettier/flat";
 import vue from "eslint-plugin-vue";
 import tsParser from "@typescript-eslint/parser";
+import importPlugin from "eslint-plugin-import";
 
 export default defineConfig([
 	globalIgnores([
@@ -19,8 +20,10 @@ export default defineConfig([
 		".nuxt/"
 	]),
 	js.configs.recommended,
+	importPlugin.flatConfigs.recommended,
+	importPlugin.flatConfigs.typescript,
 	prettier,
-	typescriptEslint.configs.recommendedTypeChecked,
+	typescriptEslint.configs.recommended,
 	vue.configs["flat/recommended"],
 	{
 		languageOptions: {
@@ -34,7 +37,7 @@ export default defineConfig([
 			sourceType: "commonjs",
 
 			parserOptions: {
-				projectService: true,
+				projectService: true
 			}
 		},
 
@@ -48,11 +51,9 @@ export default defineConfig([
 				"AATSV4/node_modules",
 				"jenkins-orchestrator/node_modules"
 			],
-
 			"import/resolver": {
 				node: {
 					extensions: [".js", ".jsx", ".ts", ".tsx", ".vue"],
-
 					moduleDirectory: [
 						"../.local/AATSV4/node_modules",
 						".local/AATSV4/node_modules",
@@ -155,7 +156,84 @@ export default defineConfig([
 				}
 			],
 
-			"import/no-extraneous-dependencies": ["off"]
+			"import/no-extraneous-dependencies": ["off"],
+
+			"import/no-unresolved": ["error", { commonjs: true, caseSensitive: true }],
+			"import/named": "error",
+			"import/default": "off",
+			"import/namespace": "off",
+			"import/export": "error",
+			"import/no-named-as-default": "error",
+			"import/no-named-as-default-member": "error",
+			"import/no-deprecated": "off",
+			"import/no-mutable-exports": "error",
+			"import/no-commonjs": "off",
+			"import/no-nodejs-modules": "off",
+			"import/first": "error",
+			"import/imports-first": "off",
+			"import/no-duplicates": "error",
+			"import/no-namespace": "off",
+			"import/extensions": [
+				"error",
+				"ignorePackages",
+				{
+					js: "never",
+					mjs: "never",
+					jsx: "never"
+				}
+			],
+			"import/order": ["error", { groups: [["builtin", "external", "internal"]] }],
+			"import/newline-after-import": "error",
+			"import/prefer-default-export": "error",
+			"import/no-restricted-paths": "off",
+			"import/max-dependencies": ["off", { max: 10 }],
+			"import/no-absolute-path": "error",
+			"import/no-dynamic-require": "error",
+			"import/no-internal-modules": [
+				"off",
+				{
+					allow: []
+				}
+			],
+			"import/unambiguous": "off",
+			"import/no-unassigned-import": "off",
+			"import/no-named-default": "error",
+			"import/no-anonymous-default-export": [
+				"off",
+				{
+					allowArray: false,
+					allowArrowFunction: false,
+					allowAnonymousClass: false,
+					allowAnonymousFunction: false,
+					allowLiteral: false,
+					allowObject: false
+				}
+			],
+			"import/exports-last": "off",
+			"import/group-exports": "off",
+			"import/no-default-export": "off",
+			"import/no-named-export": "off",
+			"import/no-self-import": "error",
+			"import/no-cycle": ["error", { maxDepth: "∞" }],
+			"import/no-useless-path-segments": ["error", { commonjs: true }],
+			"import/no-relative-parent-imports": "off",
+			"import/no-unused-modules": [
+				"off",
+				{
+					ignoreExports: [],
+					missingExports: true,
+					unusedExports: true
+				}
+			],
+			"import/no-import-module-exports": [
+				"error",
+				{
+					exceptions: []
+				}
+			],
+			"import/no-relative-packages": "error",
+			"import/consistent-type-specifier-style": ["off", "prefer-inline"],
+			"import/no-empty-named-blocks": "off"
 		}
 	},
 	{
@@ -163,7 +241,7 @@ export default defineConfig([
 
 		languageOptions: {
 			parserOptions: {
-				projectService: true,
+				projectService: true
 			}
 		},
 
@@ -188,6 +266,8 @@ export default defineConfig([
 			"@typescript-eslint/new-cap": "off",
 			"@typescript-eslint/operator-linebreak": "off",
 			"@typescript-eslint/keyword-spacing": "off",
+
+			"@typescript-eslint/no-namespace": "off",
 
 			"@typescript-eslint/prefer-destructuring": "off",
 			"@typescript-eslint/indent": "off",
