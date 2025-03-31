@@ -226,7 +226,9 @@ export default defineConfig([
 			],
 			"import/no-relative-packages": "error",
 			"import/consistent-type-specifier-style": ["off", "prefer-inline"],
-			"import/no-empty-named-blocks": "off"
+			"import/no-empty-named-blocks": "off",
+
+			"@typescript-eslint/no-unused-vars": "warn"
 		}
 	},
 	{
