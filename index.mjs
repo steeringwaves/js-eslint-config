@@ -63,7 +63,8 @@ export default defineConfig([
 						"AATSV4/node_modules",
 						"jenkins-orchestrator/node_modules"
 					]
-				}
+				},
+				typescript: true
 			}
 		},
 
@@ -173,15 +174,7 @@ export default defineConfig([
 			"import/imports-first": "off",
 			"import/no-duplicates": "error",
 			"import/no-namespace": "off",
-			"import/extensions": [
-				"error",
-				"ignorePackages",
-				{
-					js: "never",
-					mjs: "never",
-					jsx: "never"
-				}
-			],
+			"import/extensions": "off",
 			"import/order": ["error", { groups: [["builtin", "external", "internal"]] }],
 			"import/newline-after-import": "error",
 			"import/prefer-default-export": "error",
@@ -234,6 +227,12 @@ export default defineConfig([
 			"import/no-relative-packages": "error",
 			"import/consistent-type-specifier-style": ["off", "prefer-inline"],
 			"import/no-empty-named-blocks": "off"
+		}
+	},
+	{
+		files: ["**/*.js", "**/*.cjs"],
+		rules: {
+			"@typescript-eslint/no-require-imports": "off"
 		}
 	},
 	{
@@ -322,6 +321,32 @@ export default defineConfig([
 			}
 		},
 
+		settings: {
+			"import/external-module-folders": [
+				"../.local/AATSV4/node_modules",
+				".local/AATSV4/node_modules",
+				".local/node_modules",
+				"AATSV4",
+				"AATSV4/Lib",
+				"AATSV4/node_modules",
+				"jenkins-orchestrator/node_modules"
+			],
+			"import/resolver": {
+				node: {
+					extensions: [".js", ".jsx", ".ts", ".tsx", ".vue"],
+					moduleDirectory: [
+						"../.local/AATSV4/node_modules",
+						".local/AATSV4/node_modules",
+						".local/node_modules",
+						"AATSV4",
+						"AATSV4/Lib",
+						"AATSV4/node_modules",
+						"jenkins-orchestrator/node_modules"
+					]
+				}
+			}
+		},
+
 		rules: {
 			"@typescript-eslint/no-underscore-dangle": "off",
 			"@typescript-eslint/no-tabs": "off",
@@ -360,6 +385,8 @@ export default defineConfig([
 
 			"@typescript-eslint/no-continue": "off",
 			"@typescript-eslint/consistent-type-imports": "error",
+			"@typescript-eslint/no-explicit-any": "off",
+
 			"vue/singleline-html-element-content-newline": "off",
 			"vue/html-closing-bracket-newline": "off",
 			"vue/first-attribute-linebreak": "off",
