@@ -158,6 +158,15 @@ export default defineConfig([
 			"import/no-extraneous-dependencies": ["off"]
 		}
 	},
+  {
+    files: ["**/*.js", "**/*.cjs"],
+    rules: {
+      "@typescript-eslint/no-unsafe-member-access": "off",
+      "@typescript-eslint/no-unsafe-assignment": "off",
+      "@typescript-eslint/no-require-import": "off",
+      "@typescript-eslint/no-unsafe-call": "off"
+    }
+  }
 	{
 		files: ["**/*.ts", "**/*.tsx"],
 
