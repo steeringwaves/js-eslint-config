@@ -1,6 +1,6 @@
 {
 	"name": "@steeringwaves/eslint-config",
-	"version": "2.1.6",
+	"version": "2.1.7",
 	"description": "Steeringwave's ESLint config, following our styleguide",
 	"main": "index.mjs",
 	"private": false,

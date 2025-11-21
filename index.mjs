@@ -24,7 +24,7 @@ export default defineConfig([
 	importPlugin.flatConfigs.typescript,
 	prettier,
 	typescriptEslint.configs.recommended,
-	vue.configs["flat/recommended"],
+	...vue.configs["flat/recommended"],
 	{
 		languageOptions: {
 			globals: {
